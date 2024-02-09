@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <section>
+        <h4><label for="email_data">Email's Data:</label></h4>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email">
+        <label for="password">Password</label>
+        <input type="text" name="password" placeholder="Password">
+      </section>
+      <br>
+      <section>
+        <h4><label for="personal_data">Personal Data:</label></h4>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name">
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" placeholder="Surname">
+      </section>
+      <br>
+      <section>
+        <label for="birth">Birth</label>
+        <input type="date" name="birth">
+      </section>
+
+      <br>
+
+      <section>
+        <label for="phone_number">Phone Number</label>
+        <input type="text" name="phone_number" placeholder="ej: 678123123">
+      </section>
+
+      <br>
+
+      <section>
+        <h4><label for="pay_plan">Select your payment plan:</label></h4>
+        <input type="radio" id="free_plan" name="payment">
+        <label for="free_plan">Free plan</label>
+        <br>
+        <input type="radio" id="low_cost" name="payment">
+        <label for="low_cost">10$ plan</label>
+        <br>
+        <input type="radio" id="medium_cost" name="payment">
+        <label for="medium_cost">15$ plan</label>
+        <br>
+        <input type="radio" id="high_cost" name="payment">
+        <label for="high_cost">20$ plan</label>
+        <br>
+        <input type="checkbox" name="pro_plan" value="agreed">
+        <label for="pro_plan">Select if you want a Pro Plan</label>
+      </section>
+
+      <br>
+
+      <section>
+        <h4><label for="pay_plan">Payment Data:</label></h4>
+        <label for="credit_card">Credit Card</label>
+        <input type="text" name="credit_card" placeholder="ej: ES0000000000000">
+        <label for="cvc">CVC</label>
+        <input type="text" name="cvc" placeholder="ej: 1234">
+        <br>
+        <label for="expiration_date">Expiration Date</label>
+        <input type="date" name="expiration_date"> 
+      </section>
+
+      <br>
+
+      <section>
+        <h4><label for="pay_plan">Adress Data:</label></h4>
+        <label for="adress1">Write your adress:</label>
+        <br>
+        <label for="adrees2">Road</label>
+        <input type="text" name="adrees2" placeholder="Road's Name">
+        <label for="adress3">Number</label>
+        <input type="text" name="adress3" placeholder="">
+        <label for="adress4">Floor</label>
+        <input type="text" name="adress4" placeholder="">
+        <label for="adress5">Door</label>
+        <input type="text" name="adress5" placeholder="">
+      </section>
+    </form>
+  </body>
+</html>
