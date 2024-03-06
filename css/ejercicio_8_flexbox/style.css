@@ -1,0 +1,25 @@
+aside{
+    border-right: 1px solid black;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+img{
+    width: 200px;
+}
+.avatar{
+    justify-self: end;
+    align-self: center;
+
+}
+a{
+    color: #2b2b2b;
+    transition: 0.3s;
+}
+a:hover{
+    color: #2b2bb2;
+}
+
+
