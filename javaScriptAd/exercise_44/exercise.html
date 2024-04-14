@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+  async function getAndShow(id) {
+    //Cogemos del link los objetos
+    const data = await fetch("https://jsonplaceholder.typicode.com/todos/4")
+    const objData= await data.json();
+    console.log(objData);
+
+    //Damos un valor al h2
+    const titleH2 = document.createElement("h2");
+    titleH2.textContent =`Title: ${objData.title}`;
+    
+    //Creamos y damos un contenido al input
+    const input=document.createElement("input");
+    input.type="checkbox";
+    input.checked=objData.completed;
+
+
+    //Añadimos al DOM
+    const divCont= document.getElementById("container");
+    divCont.appendChild(titleH2);
+    divCont.appendChild(input);
+  }
+  getAndShow();
+</script>

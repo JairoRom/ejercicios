@@ -1,0 +1,60 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;">
+      <ul id="ul">
+      </ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  //Request del link
+  async function getData() {
+    const requestList = await fetch("https://jsonplaceholder.typicode.com/todos")
+    const responseData = await requestList.json();
+    console.log(responseData);
+
+    const getContainer=document.getElementById("ul")
+
+    //Crear <li>s que tengan la data 
+
+    responseData.forEach(item =>{
+      const liElement = document.createElement("li");
+      liElement.textContent=item.title;
+      // console.log(liElement);
+      // if (!item.completed){
+      //   liElement.style.color="rgb(20,80,100)"
+      // }
+      item.completed ? liElement.style.color="green" : liElement.style.color="red";
+      getContainer.appendChild(liElement);
+
+    //Append .todo-list element
+
+    /* 
+    // Obtener el elemento div por su id
+    var divPadre = document.getElementById("miDiv");
+
+    // Crear un nuevo elemento (por ejemplo, un párrafo <p>)
+    var nuevoElemento = document.createElement("p");
+
+    // Crear un nodo de texto para el contenido del nuevo elemento
+    var textoNuevoElemento = document.createTextNode("Este es un nuevo párrafo agregado dinámicamente.");
+
+    // Agregar el texto al elemento p
+    nuevoElemento.appendChild(textoNuevoElemento);
+
+    // Agregar el nuevo elemento como hijo del div
+    divPadre.appendChild(nuevoElemento);*/
+    })
+
+     
+
+
+  }
+  getData();
+
+
+
+
+ 
+</script>
