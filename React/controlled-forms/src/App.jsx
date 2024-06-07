@@ -1,1 +1,0 @@
-import Interactive from "./Interactive";
