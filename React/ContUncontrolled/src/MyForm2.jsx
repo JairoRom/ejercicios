@@ -36,9 +36,7 @@ function MyForm() {
         <input name="password" value={data.password} type="password" onChange={handleChange} />
         <input  name="session" type="checkbox" checked={data.session} onChange={handleChange}/>
         <button onClick={handleReset}>Reset</button> 
-        {/* Button disabled */}
         <button disabled={!data.password || !data.username} >Login</button> 
-
         <pre>
             {JSON.stringify(data,null,2)}
         </pre>
