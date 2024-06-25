@@ -1,0 +1,69 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "verde verde verde"
+    "amarillo rojo azul"
+    "amarillo rojo azul"
+    "naranja naranja azul" ;
+    text-align: justify;
+    gap: 2rem;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+section{
+    padding: 2rem;
+}
+
+#yellow{
+    grid-area: amarillo;
+    background-color: yellow;
+}
+#yellow ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    list-style: none;
+    gap: 4rem;
+    margin: 10%;
+}
+#yellow ul li{
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+    width: calc(100vw/20);
+    height: calc(100vh/20);
+}
+#green{
+    grid-area: verde;
+    background-color: green;
+}
+#orange{
+    grid-area: naranja;
+    background-color: orange;
+}
+#blue{
+    grid-area: azul;
+    background-color: mediumblue;
+}
+#red{
+    grid-area: rojo;
+    background-color: red;
+}
+#red ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    list-style: none;
+    gap: 4rem;
+    margin: 10%;
+}
+#red ul li{
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+    width: calc(100vw/20);
+    height: calc(100vh/20);
+}

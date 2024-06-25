@@ -1,0 +1,50 @@
+main{
+    margin: 1rem;
+}
+.calcula{
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: repeat(15%);
+    width: 360px;
+}
+.resultado{
+    display: grid;
+    background-color: grey;
+    text-align: end;
+    color: white;
+    align-items: center;
+    padding-right: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 60px;
+}
+.operators{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-items: center;
+    background-color: lightgray;
+    height: 60px;
+}
+.teclas{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 240px;
+}
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    background-color: white;
+    align-items: center;
+    justify-items: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.equals{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: red;
+    border-bottom-right-radius: 5px ;
+}
