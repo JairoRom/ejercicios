@@ -1,7 +1,20 @@
 const express=require("express");
 const router= express.Router();
+const userscontroller=require("../controllers/userscontrollers");
+const mainController=require("../controllers/maincontroller");
+const bcrypt=require("bcrypt");
+const multer =require("multer");
 
-const mainController=require("../controllers/maincontroller")
+const storage=multer.diskStorage({
+    destination: function (req,res,cb) {
+        cb(null,"uploads/")
+    },
+    filename: function (req,res,cb) {
+        cb(null,file.originalname)
+    }
+})
+const upload=multer({storage:storage})
+
 
 router.get("/api/planets",mainController.getPlanets)
 
@@ -12,5 +25,9 @@ router.post("/api/planets",mainController.postPlanets)
 router.put("api/planets/:id",mainController.putPlanetId)
 
 router.delete("api/planets/:id",mainController.deletePlanet)
+
+router.post("api/planets/:id/image",upload.single("planet"),mainController.uploadImage)
+
+router.get("api/users",userscontroller.getusers)
 
 module.exports= router;
